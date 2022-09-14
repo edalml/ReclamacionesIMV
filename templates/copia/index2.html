@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>IMV</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+	</head>
+	<body>
+		<section class="section">
+			<div class="container">
+				<h1 class="title"></h1>
+				<div class="block">
+					<!--- 23 Componente: <strong>Menu </strong>.--->
+					<nav class="navbar" role="navigation" aria-label="main navigation">
+							<div class="navbar-brand">
+								<a class="navbar-item" href="http://www.inclusion-europe.eu">
+									<img src="http://www.inclusion-europe.eu/wp-content/uploads/2019/12/eapn.jpg" width="80" height="80">
+								</a>
+				
+								<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+									<span aria-hidden="true"></span>
+									<span aria-hidden="true"></span>
+									<span aria-hidden="true"></span>
+								</a>
+							</div>
+				
+							<div id="navbarBasicExample" class="navbar-menu">
+								<div class="navbar-start">
+									<a class="navbar-item" href="/">
+										Inicio
+									</a>
+			
+									<a class="navbar-item" href="/actividades">
+										Actividades
+									</a>	
+									
+									<a class="navbar-item" href="/proyectos">
+										Proyectos
+									</a>
+									
+									<div class="navbar-item has-dropdown is-hoverable">
+										<a class="navbar-link">
+										Información
+										</a>
+			
+										<div class="navbar-dropdown">
+											<a class="navbar-item" href="http://www.eapnmadrid.org/">
+												EAPN Madrid
+											</a>
+											<a class="navbar-item" href="http://www.unir.net/">
+												UNIR
+											</a>
+											<a class="navbar-item" href="https://www.unir.net/facultades/facultad-derecho/clinica-juridica/">
+												Clínica Jurídica
+											</a>
+											<hr class="navbar-divider">
+											<a class="navbar-item" href="mailto:admin@eapnmadrdid.com">
+												Contacta
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="navbar-end">
+									<div class="navbar-item">
+									<p class="title is-4" style="text-align: justify;font-family: 'Ink Free';font-size: 22px;line-height: 2em;letter-spacing: 4px;">European Anti Poverty Network</p>
+										<div class="buttons">
+										</div>
+									</div>
+								</div>
+							</div>
+					</nav>
+				</div>
+				   <!--- DESDE AQUI LO QUE SE MUEVE --->
+
+
+
+				   <div class="block"><!--- PASO 2 --->
+				   
+
+					<center>
+						<h2 > Paso 1. Introduce tus datos  &gt; <strong> Paso 2. Datos de la solicitud </strong> &gt; Paso 3. Generar documento</h2>
+						<br>
+						<h3 class="titular-seccion text-center text-uppercase">Introduce los datos de la reclamación</h3>
+						<br>
+						<h4 class="text-center"><strong>ATENCIÓN: Introduce los datos iguales que los indicados en la notificación </strong>.</h4>
+						<br>
+					
+					</center>
+						<p class="title">Información de la notificación</p>
+			
+						<article class="tile is-child notification">
+							<p class="subtitle">Seleccionar la dirección provincial de la Seguridad Social a la que se dirige la reclamación</p>
+							<div class="select">
+								<select name="direccion_provincial">
+									<option>La Rioja</option>
+									<option>Madrid</option>
+									{% for file in listSim %}
+									<option name=direccion_provincial value="{{file}}" SELECTED>{{file}}</option>
+									{% endfor %}
+								</select>
+							  </div>
+						</article>
+			
+			
+									
+			
+						<article class="tile is-child notification">
+			
+						  <div class="block">
+							Número de expediente de la resolucion reclamada
+								<input class="input " type="text" placeholder="Número de expediente " name="expediente" value="{{request.form.expediente}}">
+						  </div>
+			
+						  <div class="block">
+			
+							Fecha de la notificación de la resolucion reclamada
+								<input class="input " type="date" placeholder="Notificación" name="fecha_Notificación" value="{{request.form.fecha_Notificación}}">
+						  </div>
+			
+						  <div class="block">
+							Fecha de la emisión de la resolucion reclamada
+								<input class="input " type="date" placeholder="Emisión" name="fecha_Emisión" value="{{request.form.fecha_Emisión}}">
+						  </div>
+			
+						Correcto
+						  </article>
+			
+				  <br>
+			
+			
+					   <button class="button " title="Disabled button" disabled>Sigiente</button>
+			
+					</div>
+			
+			
+	<!--- HASTA AQUI LO QUE SE MUEVE --->
+
+
+
+				<footer class="footer has-background-white">
+					<div class="content has-text-centered"  style="font-size:10px;">
+						<p>
+							<strong>Generador de Reclamaciones</strong> de <a href="http://www.eapnmadrid.org/">EAPN Madrid</a> en colaboración con <a href="http://www.unir.net">UNIR     <img src="https://estudiar.unir.net/wp-content/uploads/2022/01/Unir_2021_logo_color.svg" width="80" height="80" style="vertical-align:middle"></a>
+						</p>
+						<p>
+							Desarrollado por Alberto García Garijo bajo licencia <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU</a></p>.
+						</p>
+					</div>
+				</footer>
+
+	<!--- HASTA AQUI LO VISIBLE --->
+
+
+
+
+					<!--- HASTA AQUI LO NUEVO --->
+				  
+
+
+
+
+
+
+
+		</section>
+	</body>
+</html>
+{% endblock %}

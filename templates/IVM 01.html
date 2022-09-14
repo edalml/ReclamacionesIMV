@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IMV</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+
+
+<div class="block">
+  <!--- 23 Componente: <strong>Menu </strong>.--->
+
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+  		<div class="navbar-brand">
+    			<a class="navbar-item" href="https://bulma.io">
+      			<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    			</a>
+
+    			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      			<span aria-hidden="true"></span>
+      			<span aria-hidden="true"></span>
+      			<span aria-hidden="true"></span>
+    			</a>
+  		</div>
+
+  		<div id="navbarBasicExample" class="navbar-menu">
+    			<div class="navbar-start">
+      			<a class="navbar-item">
+        				Home
+      			</a>
+
+      			<a class="navbar-item">
+        				Documentation
+      			</a>
+
+      			<div class="navbar-item has-dropdown is-hoverable">
+        				<a class="navbar-link">
+         					More
+        				</a>
+
+        				<div class="navbar-dropdown">
+          					<a class="navbar-item">
+            					About
+          					</a>
+          					<a class="navbar-item">
+            					Jobs
+          					</a>
+          					<a class="navbar-item">
+            					Contact
+          					</a>
+          					<hr class="navbar-divider">
+          					<a class="navbar-item">
+            					Report an issue
+          					</a>
+        				</div>
+      			</div>
+    			</div>
+
+    			<div class="navbar-end">
+      			<div class="navbar-item">
+        				<div class="buttons">
+          					<a class="button is-primary">
+            					<strong>Sign up</strong>
+          					</a>
+          					<a class="button is-light">
+            					Log in
+          					</a>
+        				</div>
+      			</div>
+    			</div>
+  		</div>
+	</nav>
+</div>
+
+      </h1>
+
+<div class="block">
+ <!--- 32 Componente: <strong>Cajas de Info <br></strong> --->
+
+<!---Activamos cuando hay algun error
+	<div class="notification is-danger">
+  		<button class="delete"></button>
+  		TEXTO de ERROR 
+	</div>
+--->
+
+	<article class="message is-info">
+  		<div class="message-header">
+    			Info
+    			<button class="delete"></button>
+  		</div>
+  		<div class="message-body">
+			<!--- TEXTO --->
+			<div class="block">
+ 				 <!---5 Componente: <strong>Barras de Progreso </strong>.--->
+				Progreso conseguido
+				<progress class="progress is-warning" value="75" max="100">75%</progress>
+<!--- Activamos cuando estamos pensando
+				<progress class="progress is-small is-primary" max="100">15%</progress>
+--->
+			</div>
+
+  		</div>
+	</article>
+
+</div>
+
+<div class="block">
+  <!--- 18 Componente: <strong>Marcos <br></strong> --->
+
+	
+	<div class="tile is-ancestor">
+<!--- Aqui podemos modificar el tamaño de los marcos  is-8 --->
+  		<div class="tile is-vertical is-8">
+    			<div class="tile">
+      			<div class="tile is-parent is-vertical">
+        				<article class="tile is-child notification is-primary">
+          					<p class="title">La Rioja</p>
+          					<p class="subtitle">Seleccionar la dirección provincial de la Seguridad Social a la que se dirige la reclamación</p>
+     					
+							<div class="block">
+  								Seleccionar la <strong>dirección provincial</strong>
+
+								<div class="control">
+  									<div class="select">
+    										<select>
+      											<option>La Rioja</option>
+      											<option>Madrid</option>
+    										</select>
+  									</div>
+								</div>
+							</div>
+Correcto
+					</article>
+					<article class="tile is-child notification is-info">
+          					<p class="title">Identificación del reclamador</p>
+
+							<div class="block">
+  								<input class="input is-rounded" type="text" placeholder="NOMBRES Y APELLIDOS DEL RECLAMANTE">
+							</div>
+							<div class="field">  								
+								<input class="input is-rounded" type="text" placeholder="NÚMERO DE DOCUMENTO DE IDENTIFICACIÓN">
+ 							</div>
+							<div class="field">  								
+ 								<input class="input is-rounded" type="text" placeholder="DOMICILIO">
+							</div>
+							<div class="field">  								
+  								<input class="input is-rounded" type="text" placeholder="TELÉFONO">
+							</div>
+							<div class="field">  								
+  								<input class="input is-rounded" type="text" placeholder="CORREO ELECTRÓNICO">
+							</div>
+
+
+
+							<div class="block">
+  								Reclamaciones solicitadas <strong>Seleccion multiple <br></strong>
+
+								<div class="select is-multiple">
+  									<select multiple size="3">
+    										<option value="IngresosSuperiores">Ingresos superiores</option>
+    										<option value="ViviendaHabitual">Vivienda habitual</option>
+							    			<option value="RectificaciónCuantía">Rectificación cuantía</option>
+ 							   			
+  		</select>
+	</div>
+</div>
+
+         						
+Correcto
+        				</article>
+      				<article class="tile is-child notification is-warning">
+          					<p class="title">Información de la notificación</p>
+							<div class="block">
+Número de expediente de la resolucion reclamada
+  								<input class="input is-rounded" type="text" placeholder="Número de expediente ">
+							</div>
+
+							<div class="block">
+
+Fecha de la notificación de la resolucion reclamada
+  								<input class="input is-rounded" type="date" placeholder="Notificación ">
+							</div>
+
+							<div class="block">
+Fecha de la emisión de la resolucion reclamada
+  								<input class="input is-rounded" type="date" placeholder="Emisión">
+							</div>
+
+Correcto
+					</article>
+		     			<article class="tile is-child notification is-danger">
+        					<p class="title">Evidencias presentadas</p>
+
+								
+
+
+								<div class="control">
+    									<label class="checkbox">
+      									<input type="checkbox">
+     			 							La declaración del Impuesto sobre la Renta de Personas Físicas correspondiente al ejercicio anterior.
+    									</label>
+  								</div>        					
+
+								<div class="control">
+    									<label class="checkbox">
+      									<input type="checkbox">
+     			 							Los estados de cuenta bancaria correspondientes al ejercicio anterior.
+    									</label>
+  								</div>        					
+
+								<div class="control">
+    									<label class="checkbox">
+      									<input type="checkbox">
+     			 							Los documentos de pago emitidos por mi empleador durante el ejercicio anterior.
+    									</label>
+  								</div>   
+
+								<div class="control">
+    									<label class="checkbox">
+      									<input type="checkbox">
+     			 							Información del registro mercantil sobre inexistencia de patrimonio.
+    									</label>
+  								</div>    
+ 
+Correcto
+					<div class="content">
+			<!--- Metemos el checkbox de terminos y condiciones --->
+          						<div class="field">
+  								<div class="control">
+    									<label class="checkbox">
+      									<input type="checkbox">
+     			 							Estoy de acuerdo con <a href="#">los terminos y condiciones</a>
+    									</label>
+  								</div>
+							</div>
+        					</div>
+      				</article>
+    				</div>      			
+    			</div>    			
+  		</div>
+  		<div class="tile is-parent">
+    			<article class="tile is-child notification is-success">
+      			<div class="content">
+        				<p class="title">Documento generado</p>
+<!---        				<p class="subtitle">  Aqui ponemos el PDF o foto del progreso del documento</p>  --->
+        				<div class="content">
+						<figure class="image is-4by3">
+            					<img src="https://bulma.io/images/placeholders/640x480.png">
+          					</figure>
+        				</div>
+      			</div>
+    			</article>
+  		</div>
+	</div>
+</div>
+
+	<div class="buttons">
+  		<button class="button is-success">Comprobar</button>
+  		<button class="button is-info">Generar</button>
+  		<button class="button is-danger">Borrar</button>
+	</div>
+
+
+<div class="block">
+<!---   19 Componente: <strong>footer <br></strong> --->
+	<footer class="footer">
+  		<div class="content has-text-centered">
+    			<p>
+      			<strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      			<a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      			is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    			</p>
+  		</div>
+	</footer>
+</div>
+
+
+    </div>
+  </section>
+  </body>
+</html>

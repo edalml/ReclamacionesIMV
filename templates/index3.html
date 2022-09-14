@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+				<form action="" method="post">
+					 <div class="select is-multiple">
+						 <select name="Reclamaciones" multiple size="3">
+							 <option value="IngresosSuperiores">Ingresos superiores</option>
+							 <option value="ViviendaHabitual">Vivienda habitual</option>
+							 <option value="RectificaciónCuantía">Rectificación cuantía</option>
+							 {% for file in listSim %}
+							 <option name=Reclamaciones value="{{file}}">{{file}}</option>
+							 {% endfor %}
+						 </select>
+					</div>
+					<div class="control">
+							<label class="checkbox">
+							<input type="checkbox" name="irpf" value="{{request.form.irpf}}">
+								La declaración del Impuesto sobre la Renta de Personas Físicas correspondiente al ejercicio anterior.
+							</label>
+					</div>        					
+
+					<div class="control">
+							<label class="checkbox">
+							<input type="checkbox" name="saldo" value="{{request.form.saldo}}">
+								Los estados de cuenta bancaria correspondientes al ejercicio anterior.
+							</label>
+					</div>        					
+
+					<div class="control">
+							<label class="checkbox">
+							<input type="checkbox" name="sueldo" value="{{request.form.sueldo}}">
+								Los documentos de pago emitidos por mi empleador durante el ejercicio anterior.
+							</label>
+					</div>   
+
+					<div class="control">
+							<label class="checkbox">
+							<input type="checkbox" name="patrimonio" value="{{request.form.patrimonio}}">
+								Información del registro mercantil sobre inexistencia de patrimonio.
+							</label>
+					</div>    
+					<div class="content">
+					<!--- Metemos el checkbox de terminos y condiciones --->
+						<div class="field">
+							<div class="control">
+								<label class="checkbox">
+									<input type="checkbox" name="terminos" value="{{request.form.terminos}}">
+									Estoy de acuerdo con <a href="#">los terminos y condiciones</a>
+								</label>
+							</div>
+						</div>
+					</div>
+			   <br>
+			   <input class="btn btn-default" type="submit" value="Enviar">
+			</form>
+{% endblock %}

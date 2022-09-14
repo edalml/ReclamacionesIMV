@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+						<form action="" method="post">
+							<br>
+							<div class="select">
+								<select name="direccion_provincial">
+									<option>La Rioja</option>
+									<option>Madrid</option>
+									{% for file in listSim %}
+									<option name=direccion_provincial value="{{file}}" SELECTED>{{file}}</option>
+									{% endfor %}
+								</select>
+							</div>
+							<br>
+							<input class="input " type="text" placeholder="Número de expediente " name="expediente" value="{{request.form.expediente}}">
+							<br>
+							<input class="input " type="date" placeholder="Notificación" name="fecha_Notificación" value="{{request.form.fecha_Notificación}}">
+							<br>
+							<input class="input " type="date" placeholder="Emisión" name="fecha_Emisión" value="{{request.form.fecha_Emisión}}">
+							<br>
+						  	<input class="btn btn-default" type="submit" value="Enviar">
+							<br>
+						</form>
+{% endblock %}

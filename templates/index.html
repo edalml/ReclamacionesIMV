@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Bienvenidos a la página principal de ... Probando Flask!</h2>
+<form action="" method="post">
+    <input type="text" placeholder="nombre" name="nombre" value="{{request.form.nombre }}">
+    <br>
+    <input type="text" placeholder="numero_documento" name="numero_documento" value="{{request.form.numero_documento }}">
+    <br>
+    <input type="text" placeholder="domicilio" name="domicilio" value="{{request.form.domicilio }}">
+    <br>
+    <input type="text" placeholder="telefono" name="telefono" value="{{request.form.telefono }}">
+    <br>
+    <input type="text" placeholder="correo" name="correo" value="{{request.form.correo }}">
+    <br>
+    <input class="btn btn-default" type="submit" value="Enviar">
+    <br>
+</form>
+{% endblock %}
+
+
+
+
